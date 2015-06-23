@@ -1801,7 +1801,7 @@ Examples of ``VIZ_OUTPUT`` statements are given below.
 
 **Option #1 (time style):**
 
-.. code-block:: none
+.. code-block:: mdl
 
      VIZ_OUTPUT {
       FILENAME = "viz_data/output_example"
@@ -1813,7 +1813,7 @@ Examples of ``VIZ_OUTPUT`` statements are given below.
 
 **Option #2 (iterations style):**
 
-.. code-block:: none
+.. code-block:: mdl
 
      VIZ_OUTPUT {
       FILENAME = "viz_data/output_example"
@@ -1827,7 +1827,7 @@ Usual UNIX-style wildcards like "\*" and "?" are allowed in the
 *name_list* but must be enclosed in quotes. For example in the case of
 ``MOLECULES`` the following ``NAME_LIST`` statements are all valid:
 
-.. code-block:: none
+.. code-block:: mdl
 
     NAME_LIST{A B C1 C2 C3} 
     NAME_LIST{A B "C*"} 
@@ -1918,7 +1918,7 @@ multiplication (\*), and division (/) with the corresponding operators given in
 parenthesis. Furthermore, expressions can be grouped using parenthesis. Hence,
 the following is a valid *value* expression
 
-.. code-block:: none
+.. code-block:: mdl
 
     { (COUNT[A,WORLD] + COUNT[B,WORLD]) * 3.0 }
 
@@ -2366,7 +2366,7 @@ Examples of ``VIZ_OUTPUT`` statements are given below.
 
 **Short-hand #1 (time style):**
 
-.. code-block:: none
+.. code-block:: mdl
 
      VIZ_OUTPUT {
       FILENAME = "viz_data/output_example"
@@ -2382,7 +2382,7 @@ Examples of ``VIZ_OUTPUT`` statements are given below.
 
 **Short-hand #2 (iterations style):**
 
-.. code-block:: none
+.. code-block:: mdl
 
      VIZ_OUTPUT {
       FILENAME = "viz_data/output_example"
@@ -2398,7 +2398,7 @@ Examples of ``VIZ_OUTPUT`` statements are given below.
 
 **Expanded case:**
 
-.. code-block:: none
+.. code-block:: mdl
 
      VIZ_OUTPUT {
       FILENAME = "viz_data/output_example"
@@ -2504,7 +2504,7 @@ can be combined with the ``&`` operator. Array values are lists of numbers
 inside brackets separated by commas, or starting and ending values plus a step
 size, as exemplified below (note the double brackets):
 
-.. code-block:: none
+.. code-block:: mdl
 
     my_lucky_number = 13
     my_favorite_array = [1,3,5,7,11,17]
@@ -2687,7 +2687,7 @@ Checkpointing can be used to divide long running simulations into shorter
 segments or to change certain model parameters during a single simulation run
 (see below). The basic MDL structure of a checkpointed simulation is as follows
 
-.. code-block:: none
+.. code-block:: mdl
 
     ...
     CHECKPOINT_INFILE = "chkpt_in" 
@@ -2752,7 +2752,7 @@ formatting are illustrated below:
 
 The basic MDL structure of a checkpointed simulation is as follows:
 
-.. code-block:: none
+.. code-block:: mdl
 
     ...
     CHECKPOINT_INFILE = "chkpt_in" 
@@ -2793,7 +2793,7 @@ Ligand-gated ion channel
 Below are a set of molecule definitions and reactions that specify an
 ion channel that is gated by the binding of a single ligand.
 
-.. code-block:: none
+.. code-block:: mdl
 
     DEFINE_MOLECULES {
       channel_unbound { D_2D=0 }
@@ -2819,7 +2819,7 @@ move inside, so that we don't have to worry about the reverse reaction. If
 there is no electrical driving force, we might have to model ions both inside
 and outside:
 
-.. code-block:: none
+.. code-block:: mdl
 
     DEFINE_REACTIONS {
       channel_unbound' + ligand' -> channel_bound'             [1e7]
@@ -2833,7 +2833,7 @@ attention to the orientation of the channel. However, if there was a modest
 driving force, traveling in might be easier than traveling out, which would be
 reflected in the rates.
 
-.. code-block:: none
+.. code-block:: mdl
 
     DEFINE_REACTIONS {
       channel_unbound' + ligand' -> channel_bound'             [1e7]
@@ -2854,7 +2854,7 @@ Example bimolecular reaction
 Here's a complete MDL file that implements a simple bimolecular reaction that
 should achieve equilibrium at 482 molecules of each species.
 
-.. code-block:: none
+.. code-block:: mdl
 
     time_step = 1.0e-6
 
