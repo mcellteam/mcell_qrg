@@ -16,8 +16,7 @@ system level, we will be installing most of the Python libraries with
 virtualenv. This will minimize possible version conflicts and simplify life
 considerably.
 
-First, you will want to install pip for Python3. For a Debian/Ubuntu machine,
-type the following:
+First, you will want to install pip for Python3:
 
     sudo apt-get install python3-pip
 
